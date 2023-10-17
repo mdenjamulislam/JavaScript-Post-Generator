@@ -11,25 +11,51 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>JavaScript Post Maker</h1>
-        <p>Click the button below to generate a random quote and image.</p>
-        <div>
-            <div>
-                <input type="text">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 text-center py-4">
+                <h1>JavaScript Social Media Post Generator</h1>
+                <p>Click the button below to generate a random quote and image.</p>
             </div>
+            <div class="col-md-6">
+                <div class="p-4 border rounded">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="name" placeholder="Type your name">
+                        <label for="name">Type Your Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="activity" placeholder="Type your name">
+                        <label for="activity">Your Favourite Activity</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="place" placeholder="Type your name">
+                        <label for="place">Your Favourite Place</label>
+                    </div>
+                    <button id="generate-post" class="btn btn-success">Generate Post</button>
+                </div>
+            </div><!-- End Col-->
+            <div class="col-md-6">
+                <div class="p-4 border rounded">
+                    <div id="post-container" class="px-4 py-5 position-relative">
+                        <div id="loader">
+                            <img id="loader-img" src="loading.gif" alt="Loading spinner"/>
+                            <h3>Fetching phrase &amp; image...</h3>
+                        </div>
+                        <img class="avatar" src="images/avatar.jpg" alt="A headshot of the quote author" />
+                        <div class="quote-wrapper">
+                            <h2 class="quote"><span><span class="quote-span"></span></span></h2>
+                        </div>
+                        <div class="name-wrapper">
+                            <span><span class="name-span"></span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Col -->
         </div>
-        <img class="avatar" src="images/avatar.jpg" alt="A headshot of the quote author" />
-        <div id="loader">
-            <img id="loader-img" src="loading.gif" alt="Loading spinner"/>
-            <h3>Fetching phrase &amp; image...</h3>
-        </div>
-        <div class="quote-wrapper">
-            <h2 class="quote"><span><span class="quote-span"></span></span></h2>
-        </div>
-        <div class="name-wrapper">
-            <span><span class="name-span"></span></span>
-        </div>
+        
+        
+        
     </div>
 
     <!-- Bootstrap CDN -->

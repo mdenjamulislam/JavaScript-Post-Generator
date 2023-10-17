@@ -1,17 +1,19 @@
-const imagePromptFromLocalStorage = localStorage.getItem("imagePrompt")
-const quotePromptFromLocalStorage = localStorage.getItem("quotePrompt")
-const imageUrlFromLocalStorage = localStorage.getItem("imageUrl")
-const quoteFromLocalStorage = localStorage.getItem("quote")
-const quoteSpan = document.querySelector(".quote-span")
-const quoteWrapper = document.querySelector(".quote-wrapper")
-const nameSpan = document.querySelector(".name-span")
-const loader = document.getElementById("loader")
+const imagePromptFromLocalStorage = localStorage.getItem("imagePrompt");
+const quotePromptFromLocalStorage = localStorage.getItem("quotePrompt");
+const imageUrlFromLocalStorage = localStorage.getItem("imageUrl");
+const quoteFromLocalStorage = localStorage.getItem("quote");
+const quoteSpan = document.querySelector(".quote-span");
+const quoteWrapper = document.querySelector(".quote-wrapper");
+const nameSpan = document.querySelector(".name-span");
+const loader = document.getElementById("loader");
+
+const postContainer = document.getElementById('post-container');
 
 function startLoading() {
   nameSpan.style.display = "none"
   quoteWrapper.style.display = "none"
   loader.style.display = "block"
-  document.body.backgroundImage = ""
+  document.body.backgroundImage = "";
 }
 
 function stopLoading(name, url, quote) {
@@ -19,7 +21,7 @@ function stopLoading(name, url, quote) {
   quoteWrapper.style.display = "block"
   loader.style.display = "none"
   nameSpan.textContent = `${name} - ${getDate()}`
-  document.body.style.backgroundImage = `url(${url})`
+  postContainer.style.backgroundImage = `url(${url})`
   quoteSpan.textContent = quote
 }
 

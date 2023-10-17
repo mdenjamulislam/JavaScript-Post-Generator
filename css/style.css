@@ -19,34 +19,26 @@ body {
     margin: 0;
     color: var(--text-color);
     height: 100vh;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    width: 100vw;
 }
 
-.container {
-    width: 90%;
-    max-width: 600px;
-    height: 100vh;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
 #loader {
     display: none;
-}
-
-h3 {
-    margin: 1em;
 }
 
 #loader-img {
     width: 30px;
     display: block;
     margin: 1.5em auto;
+}
+
+#post-container {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 450px;
 }
 
 .avatar {
@@ -58,36 +50,33 @@ h3 {
     box-shadow: 0px 2px 6px rgb(0, 0, 0, 0.5);
 }
 
-h2, h3 {
-    margin: 0;
+.quote-wrapper {
+    text-align: center;
+    margin: 20px auto;
+    padding: 15px;
+    position: relative;
+    background: rgba(22, 43, 72, 0.85);
 }
 
 .quote {
-    margin: 1.5em 0;
     font-size: 1.25em;
     font-weight: bold;
-    text-transform: uppercase;
     color: white;
     line-height: 1.8em;
 }
 
-.quote-span {
-    padding: 3px;
-    background: rgba(22, 43, 72, 0.85);
-}
-
 .name-wrapper {
-    text-align: center;
-    margin: 20px auto;
+    text-align: right;
 }
 .name-span {
     color: white;
-    font-size: 15px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 12px;
     line-height: 1.4em;
-    padding: 10px;
+    padding: 5px;
     background: rgba(250, 0, 0, 0.75);
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
 }
 
 .title  {
@@ -110,4 +99,7 @@ h2, h3 {
     background-color: var(--box-bg-color);
     border: 3px solid var(--border-color);
 }
+
+
+
 
