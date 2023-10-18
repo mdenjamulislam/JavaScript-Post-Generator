@@ -1,22 +1,20 @@
 import { generateTextAndImage } from "./utils.js";
 
 
+const postGenerateBtn = document.getElementById('generate-post');
 
-// 1. Change the value of the variable to your name
-let name = "Guil Hernandez"
+postGenerateBtn.addEventListener('click', () => {
+    const name = document.getElementById('name').value;
+    const favoriteActivity = document.getElementById('favorite-activity').value;
+    const favoritePlace = document.getElementById('favorite-place').value; 
+    let temperature = 0.6;
+    // Reset Values
+    name.value = '';
+    favoriteActivity.value = '';
+    favoritePlace.value = '';
+    
+    generateTextAndImage(name, favoriteActivity, favoritePlace, temperature);
+});
 
-// 2. Change the value of the variable to your favorite activity
-let favoriteActivity = "snacking"
 
-// 3. Assign the favoritePlace variable your favorite place
-// I.e. city, mountain, pub, forrest, beach, Manhattan, etc.
-let favoritePlace = "coffee shop"
 
-// 4. Configure the AI by setting a temperature from 0 to 1
-// The higher temperature, the more random & experimental output
-let temperature = 0.6
-
-// Optional: delete "avatar.jpg" and add a photo of yourself
-// (remember to use "avatar.jpg" as the name of your photo)
-
-generateTextAndImage(name, favoriteActivity, favoritePlace, temperature)
