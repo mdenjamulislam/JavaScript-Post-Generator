@@ -12,5 +12,4 @@ postGenerateBtn.addEventListener("click", () => {
   document.getElementById("favorite-activity").value = "";
   document.getElementById("favorite-place").value = "";
   generateTextAndImage(name, favoriteActivity, favoritePlace, temperature);
-
 });

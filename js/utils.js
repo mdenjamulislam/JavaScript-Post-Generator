@@ -31,11 +31,15 @@ export async function generateTextAndImage(
   favPlace,
   temperature
 ) {
-  startLoading()
-  let url = await getImage(favPlace)
-  let quote = await getQuote(favActivity, favPlace, temperature)
-  stopLoading(name, url, quote)
-  return
+  // console.log(name.length, favActivity favPlace >0);
+  if((name.length>0 && favActivity.length>0 && favPlace.length >0)){
+    startLoading()
+    let url = await getImage(favPlace)
+    let quote = await getQuote(favActivity, favPlace, temperature)
+    stopLoading(name, url, quote)
+  } else {
+    alert("Please, provide all the information")
+  }
 }
 
 function getDate() {
