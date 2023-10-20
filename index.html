@@ -14,7 +14,7 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col-12 text-center py-4">
-                <h1>JavaScript Social Media Post Generator</h1>
+                <h1>Social Media Post Generator</h1>
                 <p>Click the button below to generate a random quote and image.</p>
             </div>
             <div class="col-md-6">
@@ -38,10 +38,14 @@
                 <div class="p-4 border rounded">
                     <div id="post-container" class="px-4 py-5 position-relative">
                         <div id="loader">
-                            <img id="loader-img" src="loading.gif" alt="Loading spinner"/>
-                            <h3>Fetching phrase &amp; image...</h3>
+                            <img id="loader-img" src="images/loading.gif" alt="Loading spinner"/>
+                            <h3 class="text-center">Fetching phrase &amp; image...</h3>
                         </div>
                         <img class="avatar" src="images/avatar.jpg" alt="A headshot of the quote author" />
+                        <div id="loader">
+                            <img id="loader-img" src="images/loading.gif" alt="Loading spinner"/>
+                            <h3>Fetching phrase &amp; image...</h3>
+                        </div>
                         <div class="quote-wrapper">
                             <h2 class="quote"><span><span class="quote-span"></span></span></h2>
                         </div>
