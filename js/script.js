@@ -1,6 +1,8 @@
 import { generateTextAndImage } from "./utils.js";
 
+const postGenerateBtn = document.getElementById("generate-post");
 
+<<<<<<< HEAD
 
 // 1. Change the value of the variable to your name
 let name = "Enjam"
@@ -20,3 +22,16 @@ let temperature = 0.6
 // (remember to use "avatar.jpg" as the name of your photo)
 
 generateTextAndImage(name, favoriteActivity, favoritePlace, temperature)
+=======
+postGenerateBtn.addEventListener("click", () => {
+  let name = document.getElementById("name").value;
+  let favoriteActivity = document.getElementById("favorite-activity").value;
+  let favoritePlace = document.getElementById("favorite-place").value;
+  let temperature = 0.6;
+  // Reset Values
+  document.getElementById("name").value = "";
+  document.getElementById("favorite-activity").value = "";
+  document.getElementById("favorite-place").value = "";
+  generateTextAndImage(name, favoriteActivity, favoritePlace, temperature);
+});
+>>>>>>> 978b68a7090d5c36a63fe653b4116b250ca4bbdd
